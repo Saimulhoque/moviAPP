@@ -7,7 +7,6 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.forbitbd.task.R;
 
-
 public class BaseActivity extends AppCompatActivity {
 
     public ProgressDialog mProgressDialog;
@@ -18,7 +17,6 @@ public class BaseActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         toolbar.inflateMenu(R.menu.menu);
     }
-
 
     public void showProgressDialog() {
         if (mProgressDialog == null) {
