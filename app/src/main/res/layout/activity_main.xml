@@ -1,23 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    >
+    android:background="@color/white"
+    tools:context=".ui.main.MainActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:gravity="center"
+        android:layout_centerInParent="true">
 
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/ic" />
+    </RelativeLayout>
 
-
-    <Button
-        android:id="@+id/entry"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_centerInParent="true"
-        android:text="Enter In App"
-        />
+        android:background="@color/gray_transparent">
+    </androidx.appcompat.widget.Toolbar>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomnavigation"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/slideview"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabDots"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#00302F2F"
+                    app:tabBackground="@drawable/tab_selector"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp"
+                    android:layout_marginTop="170dp"/>
+            </RelativeLayout>
+
+
+            <fragment
+                android:id="@+id/buttonfragment"
+                android:name="com.forbitbd.task.ui.main.buttonFragment.ButtonFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_button" />
+
+            <fragment
+                android:id="@+id/popularVideos"
+                android:name="com.forbitbd.task.ui.main.popularVideos.PopularVideosFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_popular_videos" />
+
+            <fragment
+                android:id="@+id/recentlyadded"
+                android:name="com.forbitbd.task.ui.main.featured.FeaturedFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_featured" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_menu" />
 </RelativeLayout>
-

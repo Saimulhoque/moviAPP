@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">Task</string>
+    <string name="home">Home</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="kids">Kids</string>
+    <string name="icon">Icon</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="popular_movies">Popular Movies</string>
+    <string name="movie_name">Movie Name</string>
+    <string name="recentlyAdded">Recently Added</string>
+    <string name="popular_tv_shows">Popular Tv Shows</string>
+    <string name="livetvandradio"><![CDATA[Live TV & Radio]]></string>
+
+    <string name="bangla_movies">Bangla Movies</string>
+    <string name="korean_movies">Korean Movies</string>
+    <string name="english_movies">English Movies</string>
+    <string name="tv_series">Tv Series</string>
+    <string name="kolkata_movies">Kolkata Movies</string>
+    <string name="chinese_movies">Chinese Movies</string>
+    <string name="turkish_movies">Turkish Movies</string>
+    <string name="tv_shows">TV Shows</string>
+    <string name="hindi_movies">Hindi Movies</string>
+    <string name="japanese_movies">Japanese Movies</string>
+    <string name="italian_movies">Italian Movies</string>
+    <string name="french_movies">French Movies</string>
+    <string name="south_indian">South Indian</string>
+    <string name="animation">Animation</string>
+    <string name="search">Search</string>
+    <string name="kids_zone">Kids Zone</string>
+    <string name="ic">null</string>
+    <string name="featured_movies">Featured Movies</string>
 </resources>
