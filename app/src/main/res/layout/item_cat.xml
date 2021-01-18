@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.button.MaterialButton
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/button"
+    android:text="@string/bangla_movies"
+    style="@style/button_style"
+    android:layout_margin="4dp">
+
+</com.google.android.material.button.MaterialButton>
