@@ -1,8 +1,9 @@
 package com.forbitbd.task.ui.launcher;
 
+import com.forbitbd.myplayer.models.OnlineStatus;
 import com.forbitbd.task.api.ApiClient;
 import com.forbitbd.task.api.ServiceGenerator;
-import com.forbitbd.task.model.OnlineStatus;
+
 
 import retrofit2.Call;
 import retrofit2.Callback;

@@ -7,12 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.forbitbd.myplayer.models.OnlineStatus;
 import com.forbitbd.task.DialogFragment;
 import com.forbitbd.task.R;
-import com.forbitbd.task.api.ApiClient;
-import com.forbitbd.task.model.Category;
-import com.forbitbd.task.model.Movie;
-import com.forbitbd.task.model.OnlineStatus;
 import com.forbitbd.task.ui.main.MainActivity;
 import com.forbitbd.task.utils.Constant;
 
@@ -39,6 +36,7 @@ public class LauncherActivity extends AppCompatActivity implements LauncherContr
         }else{
             DialogFragment dialogFragment = new DialogFragment();
             dialogFragment.show(getSupportFragmentManager(),"jjkjjj");
+            dialogFragment.setCancelable(false);
         }
     }
 }

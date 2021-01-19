@@ -1,9 +1,10 @@
 package com.forbitbd.task.ui.main.popularVideos;
 
 
+import com.forbitbd.myplayer.models.Movie;
 import com.forbitbd.task.api.ApiClient;
 import com.forbitbd.task.api.ServiceGenerator;
-import com.forbitbd.task.model.Movie;
+
 
 import java.util.List;
 

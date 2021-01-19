@@ -1,7 +1,7 @@
 package com.forbitbd.task.ui.main.categorie;
 
 
-import com.forbitbd.task.model.Movie;
+import com.forbitbd.myplayer.models.Movie;
 
 public interface MovieClickListener {
 

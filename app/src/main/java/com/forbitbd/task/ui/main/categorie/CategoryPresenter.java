@@ -3,10 +3,11 @@ package com.forbitbd.task.ui.main.categorie;
 import android.util.Log;
 
 
+import com.forbitbd.myplayer.models.Category;
+import com.forbitbd.myplayer.models.Movie;
 import com.forbitbd.task.api.ApiClient;
 import com.forbitbd.task.api.ServiceGenerator;
-import com.forbitbd.task.model.Category;
-import com.forbitbd.task.model.Movie;
+
 
 import java.util.List;
 

@@ -12,8 +12,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.forbitbd.myplayer.MyPlayerActivity;
+import com.forbitbd.myplayer.models.Movie;
 import com.forbitbd.task.R;
-import com.forbitbd.task.model.Movie;
+
 import com.forbitbd.task.ui.main.popularVideos.ItemClickListener;
 import com.forbitbd.task.ui.main.popularVideos.RecyclerviewAdapter;
 import com.forbitbd.task.utils.Constant;

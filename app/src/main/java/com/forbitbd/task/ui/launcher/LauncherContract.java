@@ -1,6 +1,7 @@
 package com.forbitbd.task.ui.launcher;
 
-import com.forbitbd.task.model.OnlineStatus;
+
+import com.forbitbd.myplayer.models.OnlineStatus;
 
 public interface LauncherContract {
 

@@ -15,9 +15,11 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.forbitbd.myplayer.MyPlayerActivity;
+import com.forbitbd.myplayer.fullScreen.FullScreenPlayerActivity;
+import com.forbitbd.myplayer.models.Category;
+import com.forbitbd.myplayer.models.Movie;
 import com.forbitbd.task.R;
-import com.forbitbd.task.model.Category;
-import com.forbitbd.task.model.Movie;
+
 import com.forbitbd.task.utils.BaseActivity;
 import com.forbitbd.task.utils.Constant;
 
@@ -119,8 +121,8 @@ public class CategoryActivity extends BaseActivity implements MovieClickListener
 
     @Override
     public void onMovieClick(Movie movie) {
-        Intent intent = new Intent(getApplicationContext(), MyPlayerActivity.class);
-        intent.putExtra(Constant.VIDEO_URL, movie.getVideo_url());
+        Intent intent = new Intent(getApplicationContext(), FullScreenPlayerActivity.class);
+        intent.putExtra(Constant.MOVIE, movie);
         startActivity(intent);
     }
 

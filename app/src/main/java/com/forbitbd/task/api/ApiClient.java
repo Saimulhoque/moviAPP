@@ -1,8 +1,9 @@
 package com.forbitbd.task.api;
 
-import com.forbitbd.task.model.Category;
-import com.forbitbd.task.model.Movie;
-import com.forbitbd.task.model.OnlineStatus;
+
+import com.forbitbd.myplayer.models.Category;
+import com.forbitbd.myplayer.models.Movie;
+import com.forbitbd.myplayer.models.OnlineStatus;
 
 import java.util.List;
 

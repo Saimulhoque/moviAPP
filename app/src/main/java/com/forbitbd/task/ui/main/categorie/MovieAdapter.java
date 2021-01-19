@@ -12,8 +12,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.forbitbd.myplayer.models.Movie;
 import com.forbitbd.task.R;
-import com.forbitbd.task.model.Movie;
+
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
