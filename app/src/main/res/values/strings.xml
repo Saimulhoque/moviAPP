@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Task</string>
+    <string name="app_name">Rong Buzz</string>
     <string name="home">Home</string>
     <string name="upcoming">Upcoming</string>
     <string name="kids">Kids</string>
@@ -30,4 +30,6 @@
     <string name="kids_zone">Kids Zone</string>
     <string name="ic">null</string>
     <string name="featured_movies">Featured Movies</string>
+    <string name="sorry_you_are_not_connected_to_our_network">Sorry! You Are Not Connected To Our Network.</string>
+    <string name="ok">Ok</string>
 </resources>

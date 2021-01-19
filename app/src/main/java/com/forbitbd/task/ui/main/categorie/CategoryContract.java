@@ -1,7 +1,8 @@
 package com.forbitbd.task.ui.main.categorie;
 
-import com.forbitbd.task.model.Category;
-import com.forbitbd.task.model.Movie;
+
+import com.forbitbd.myplayer.models.Category;
+import com.forbitbd.myplayer.models.Movie;
 
 import java.util.List;
 

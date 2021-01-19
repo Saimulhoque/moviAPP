@@ -8,8 +8,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.forbitbd.myplayer.models.Category;
 import com.forbitbd.task.R;
-import com.forbitbd.task.model.Category;
+
 import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;

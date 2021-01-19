@@ -11,8 +11,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.forbitbd.myplayer.MyPlayerActivity;
+import com.forbitbd.myplayer.models.Movie;
 import com.forbitbd.task.R;
-import com.forbitbd.task.model.Movie;
+
 import com.forbitbd.task.utils.Constant;
 
 import java.util.List;
