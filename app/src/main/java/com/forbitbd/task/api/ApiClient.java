@@ -2,6 +2,7 @@ package com.forbitbd.task.api;
 
 import com.forbitbd.task.model.Category;
 import com.forbitbd.task.model.Movie;
+import com.forbitbd.task.model.OnlineStatus;
 
 import java.util.List;
 
@@ -28,6 +29,9 @@ public interface ApiClient {
 
     @GET("/movizo/movies/featured")
     Call<List<Movie>> getFeaturedMovies();
+
+    @GET("/movizo/status")
+    Call<OnlineStatus> getOnlineStatus();
 
     }
 

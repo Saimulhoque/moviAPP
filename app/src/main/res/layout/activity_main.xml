@@ -1,95 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/black"
+    android:layout_marginBottom="40dp"
     tools:context=".ui.main.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:gravity="center"
-        android:layout_centerInParent="true">
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:gravity="center"
-            android:src="@drawable/logo"
-            android:contentDescription="@string/ic" />
-    </RelativeLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/slideview"
+        android:layout_width="fill_parent"
+        android:layout_height="600dp">
+    </androidx.viewpager.widget.ViewPager>
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/gray_transparent">
-    </androidx.appcompat.widget.Toolbar>
-
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/bottomnavigation"
-        android:layout_below="@+id/toolbar"
         android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="520dp"
+            android:background="#00000000"
             android:orientation="vertical">
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <androidx.viewpager.widget.ViewPager
-                    android:id="@+id/slideview"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:orientation="vertical">
+
+                <fragment
+                    android:id="@+id/popularVideos"
+                    android:name="com.forbitbd.task.ui.main.popularVideos.PopularVideosFragment"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp" />
+                    android:layout_height="wrap_content"
+                    tools:layout="@layout/fragment_popular_videos" />
 
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tabDots"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:background="#00302F2F"
-                    app:tabBackground="@drawable/tab_selector"
-                    app:tabGravity="center"
-                    app:tabIndicatorHeight="0dp"
-                    android:layout_marginTop="170dp"/>
-            </RelativeLayout>
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:orientation="vertical">
 
+                    <fragment
+                        android:id="@+id/recentlyadded"
+                        android:name="com.forbitbd.task.ui.main.featured.FeaturedFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:layout="@layout/fragment_featured" />
 
-            <fragment
-                android:id="@+id/buttonfragment"
-                android:name="com.forbitbd.task.ui.main.buttonFragment.ButtonFragment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:layout="@layout/fragment_button" />
-
-            <fragment
-                android:id="@+id/popularVideos"
-                android:name="com.forbitbd.task.ui.main.popularVideos.PopularVideosFragment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:layout="@layout/fragment_popular_videos" />
-
-            <fragment
-                android:id="@+id/recentlyadded"
-                android:name="com.forbitbd.task.ui.main.featured.FeaturedFragment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:layout="@layout/fragment_featured" />
+                    <fragment
+                        android:id="@+id/buttonfragment"
+                        android:name="com.forbitbd.task.ui.main.buttonFragment.ButtonFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:layout="@layout/fragment_button" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomnavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="?android:attr/windowBackground"
-        app:menu="@menu/bottom_menu" />
+        android:background="@color/black"
+        app:menu="@menu/bottom_menu"/>
+
 </RelativeLayout>
