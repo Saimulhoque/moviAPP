@@ -13,14 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.launcher.LauncherActivity">
+
+        </activity>
+        <activity android:name=".ui.main.MainActivity" android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".ui.main.MainActivity" android:theme="@style/AppTheme">
-
         </activity>
         <activity android:name=".ui.main.categorie.CategoryActivity" />
         <activity android:name=".ui.livetv.LiveTvActivity" />

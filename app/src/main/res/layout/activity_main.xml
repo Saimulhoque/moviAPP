@@ -8,12 +8,22 @@
     android:layout_marginBottom="40dp"
     tools:context=".ui.main.MainActivity">
 
-
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/slideview"
         android:layout_width="fill_parent"
         android:layout_height="600dp">
     </androidx.viewpager.widget.ViewPager>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabDots"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        app:tabBackground="@drawable/tab_selector"
+        app:tabGravity="center"
+        android:background="#00302F2F"
+        app:tabIndicatorHeight="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="510dp"/>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
