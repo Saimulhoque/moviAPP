@@ -2,6 +2,7 @@ package com.forbitbd.task.ui.main.popularVideos;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.forbitbd.myplayer.MyPlayerActivity;
+import com.forbitbd.myplayer.fullScreen.FullScreenPlayerActivity;
 import com.forbitbd.myplayer.models.Movie;
 import com.forbitbd.task.R;
 
@@ -43,13 +45,14 @@ public class PopularVideosFragment extends Fragment implements PopularVideosCont
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
-        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(recyclerviewAdapter);
         tvTitle = view.findViewById(R.id.title);
 
-
         mPresenter.getPopularMovies();
+
+
+
 
         return view;
     }
@@ -57,6 +60,8 @@ public class PopularVideosFragment extends Fragment implements PopularVideosCont
     public void setTitle(String title){
         tvTitle.setText(title);
     }
+
+
 
     @Override
     public void renderMovies(List<Movie> movieList) {
@@ -67,8 +72,8 @@ public class PopularVideosFragment extends Fragment implements PopularVideosCont
 
     @Override
     public void onItemClick(Movie movie) {
-        Intent intent = new Intent(getContext(), MyPlayerActivity.class);
-        intent.putExtra(Constant.VIDEO_URL, movie.getVideo_url());
+        Intent intent = new Intent(getContext(),FullScreenPlayerActivity.class);
+        intent.putExtra(Constant.MOVIE, movie);
         startActivity(intent);
     }
 }
