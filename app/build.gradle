@@ -8,16 +8,42 @@ android {
         applicationId "com.forbitbd.task"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 3
+        versionCode 6
         versionName "1.2"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    aaptOptions {
+        cruncherEnabled = false
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("/home/sohel/Desktop/BACKUP/KEYSTORE/RongBuzz/release.jks")
+            storePassword "abid2049"
+            keyAlias "key0"
+            keyPassword "abid2049"
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
 
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {
@@ -44,7 +70,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation "androidx.recyclerview:recyclerview:1.1.0"
-    implementation 'com.github.sohel2178:MyPlayer:1.0.9'
+    implementation 'com.github.sohel2178:MyPlayer:1.1.0'
 
     //Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
@@ -52,6 +78,5 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
 
-
-    
+    implementation 'com.jaeger.statusbarutil:library:1.4.0'
 }
