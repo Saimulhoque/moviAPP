@@ -1,8 +1,10 @@
 package com.forbitbd.task.ui.upcoming;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,11 +29,15 @@ public class UpcomingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(1);
+        getWindow().setFlags(WindowManager.LayoutParams. FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        getWindow().setFlags(WindowManager.LayoutParams. FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setStatusBarColor(Color.TRANSPARENT);
         setContentView(R.layout.activity_upcoming);
 
         upcomingList = new ArrayList<>();
         for (int i=0;i<0;i++){
-            upcomingList.add(new Upcoming(R.drawable.slide1, "Movie "+String.valueOf(i+1)));
+            upcomingList.add(new Upcoming(R.drawable.slide3, "Movie "+String.valueOf(i+1)));
         }
 
         recyclerView = findViewById(R.id.recyclerView);

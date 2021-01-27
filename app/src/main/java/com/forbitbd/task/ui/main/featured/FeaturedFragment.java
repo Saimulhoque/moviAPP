@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.forbitbd.myplayer.MyPlayerActivity;
+import com.forbitbd.myplayer.fullScreen.FullScreenPlayerActivity;
 import com.forbitbd.myplayer.models.Movie;
 import com.forbitbd.task.R;
 
@@ -61,7 +62,6 @@ public class FeaturedFragment extends Fragment implements FeaturedContract.View,
     private void initView(View view) {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
-        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(recyclerviewAdapter);
         tvTitle = view.findViewById(R.id.title);
@@ -78,8 +78,8 @@ public class FeaturedFragment extends Fragment implements FeaturedContract.View,
 
     @Override
     public void onItemClick(Movie movie) {
-        Intent intent = new Intent(getContext(), MyPlayerActivity.class);
-        intent.putExtra(Constant.VIDEO_URL, movie.getVideo_url());
+        Intent intent = new Intent(getContext(), FullScreenPlayerActivity.class);
+        intent.putExtra(Constant.MOVIE, movie);
         startActivity(intent);
     }
 }

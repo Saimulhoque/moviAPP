@@ -21,7 +21,6 @@ import com.forbitbd.task.ui.upcoming.UpcomingActivity;
 import com.forbitbd.task.utils.BaseActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
-import com.jaeger.library.StatusBarUtil;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -29,7 +28,7 @@ import java.util.TimerTask;
 public class MainActivity extends BaseActivity {
 
     ViewPager viewPager;
-    int images[] = { R.drawable.war, R.drawable.movieth,R.drawable.war,R.drawable.movieth};
+    int images[] = { R.drawable.war,R.drawable.slide1,R.drawable.slide2,R.drawable.slide3,R.drawable.slide4,R.drawable.slide5,};
     int currentPageCounter = 0;
 
     @Override
@@ -37,15 +36,13 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(1);
         getWindow().setFlags(WindowManager.LayoutParams. FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-
-
-
         getWindow().setStatusBarColor(Color.TRANSPARENT);
         setContentView(R.layout.activity_main);
 
-
         viewPager = findViewById(R.id.slideview);
         viewPager.setAdapter(new SliderAdapter(images, MainActivity.this));
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabDots);
+        tabLayout.setupWithViewPager(viewPager, true);
 
         final Handler handler = new Handler();
         final Runnable update = new Runnable() {
